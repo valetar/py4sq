@@ -10,5 +10,5 @@ __________________________________________________
 * Supports userless access
 * Dynamic queries
 
-See `https://developer.foursquare.com/overview/ https://developer.foursquare.com/overview/`_ for 
+See https://developer.foursquare.com/overview/ for 
 details about resources and parameters.
