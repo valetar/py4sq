@@ -14,7 +14,10 @@
 #limitations under the License.
 #
 
-import json
+try:
+    import json
+except ImportError:
+    import simplejson as json
 import urllib
 import urllib2
 
