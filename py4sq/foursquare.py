@@ -54,7 +54,7 @@ class FoursquareAuth(object):
         url = '%s?client_id=%s&client_secret=%s&grant_type=authorization_code&code=%s' % (
                                                             TOKEN_ENDPOINT, self.client_id, self.client_secret, code
                                                             )
-        self.access_token = json.load(urllib2.urlopen(url))
+        self.access_token = json.load(urllib2.urlopen(url))['access_token']
         
         return self.access_token
 
@@ -87,7 +87,7 @@ class Foursquare(object):
                 if param:
                     url += '/%s' % param
             url = '%s?%s' % (url, urllib.urlencode(kwargs)) 
-            self.response = json.load(urllib2.urlopen(url))
+            self.response = json.load(urllib2.urlopen(url))['response']
             return self.response
         except Exception, e:
             raise FoursquareException(e)
