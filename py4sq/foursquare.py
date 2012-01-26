@@ -80,7 +80,7 @@ class Foursquare(object):
     def request(self, resource, resource_id=None, aspect=None, action=None, **kwargs):
         try:
             if self.access_token:
-                kwargs.update({'access_token':self.access_token, 'v':self.version})
+                kwargs.update({'oauth_token':self.access_token, 'v':self.version})
             else:
                 kwargs.update({'client_id':self.client_id,
                                'client_secret':self.client_secret,
